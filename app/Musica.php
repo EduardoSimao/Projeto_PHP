@@ -6,13 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Musica extends Model
 {
-    protected $fillable=['nome','genero_id', 'cantor_id', 'album_id'];
+    protected $fillable=['nome','genero_id', 'albuns_id'];
     public $timestamps=false;
-
-    public function cantor()
-    {
-    	return $this->belongsTo('App\Cantor');
-    }
 
     public function genero()
     {

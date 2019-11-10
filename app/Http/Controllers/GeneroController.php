@@ -19,23 +19,12 @@ class GeneroController extends Controller
          return view ('genero.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         Genero::create($request->all());
         return redirect('genero');
     }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Curso  $curso
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit(Genero $genero)
     {
         return view('genero.edit')->with('genero',$genero);
