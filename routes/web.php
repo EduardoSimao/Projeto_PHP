@@ -1,5 +1,5 @@
 <?php
-
+use App\Usuario;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('aluno','AlunoController');
+Route::resource('usuario','UsuarioController');
 
-Route::resource('curso','CursoController');
+// Um perfil específico
+Route::post('/login',function(){
+
+$user = Usuario::where('email', '=', $_POST['email'])->get();
+
+try {
+
+    $teste = $user[0]->id;
+    if($user[0]->senha ==  $_POST['senha'])
+        return view('usuario.dash')-> with('user',$user); 
+    else
+        echo("Senha Incorreta!");
+        return view('usuario.index');
+
+
+} catch (Exception $e) {
+    echo("Erro ao fazer login! Verifique E-mail e Senha!");
+    return view('usuario.index');
+
+}
+
+});
