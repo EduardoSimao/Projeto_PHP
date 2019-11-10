@@ -12,11 +12,13 @@ use App\Usuario;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('usuario.index');
 });
 
 Route::resource('usuario','UsuarioController');
 Route::resource('genero','GeneroController');
+Route::resource('cantor','CantorController');
+Route::resource('album','AlbumController');
 
 // Um perfil específico
 Route::post('/login',function(){

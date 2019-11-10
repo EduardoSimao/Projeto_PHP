@@ -13,13 +13,13 @@ class CreateAlbunsTable extends Migration
      */
     public function up()
     {
-        Schema::create('albuns', function (Blueprint $table) {
+        Schema::create('albums', function (Blueprint $table) {
             $table->increments('id');
             //$table->timestamps();
             $table->string('nome',100);
 
             $table->integer('cantor_id')->unsigned(); 
-            $table->foreign('cantor_id')->references('id')->on('cantores');
+            $table->foreign('cantor_id')->references('id')->on('cantors');
         
 
         });
@@ -32,6 +32,6 @@ class CreateAlbunsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('albuns');
+        Schema::dropIfExists('albums');
     }
 }

@@ -1,8 +1,5 @@
 <style>
   
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -3450,7 +3447,13 @@ iframe {
 				</span>
   @csrf
   <div class="text-center">
+      <a class="txt2 hov1" href="/cantor">Cantores</a>
+        </div>
+        <div class="text-center">
       <a class="txt2 hov1" href="/genero">Generos</a>
-				</div>
+        </div>
+        <div class="text-center">
+      <a class="txt2 hov1" href="/album">Albuns</a>
+        </div>
 </div>
 @endsection

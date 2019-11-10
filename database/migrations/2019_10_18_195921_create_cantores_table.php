@@ -13,7 +13,7 @@ class CreateCantoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('cantores', function (Blueprint $table) {
+        Schema::create('cantors', function (Blueprint $table) {
             $table->increments('id');
             //$table->timestamps();
             $table->string('nome',100);
@@ -29,6 +29,6 @@ class CreateCantoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cantores');
+        Schema::dropIfExists('cantors');
     }
 }
