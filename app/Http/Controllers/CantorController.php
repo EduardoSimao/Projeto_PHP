@@ -19,23 +19,12 @@ class CantorController extends Controller
          return view ('cantor.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         Cantor::create($request->all());
         return redirect('cantor');
     }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Curso  $curso
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit(cantor $cantor)
     {
         return view('cantor.edit')->with('cantor',$cantor);

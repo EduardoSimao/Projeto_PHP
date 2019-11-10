@@ -3458,6 +3458,7 @@ iframe {
       <a class="menudados" href="/cantor">Cantores</a>
       <a class="menudados" href="/genero">Generos</a>
       <a class="menudados" href="/album">Albuns</a>
+      <a class="menudados" href="/musica">Musicas</a>
         </div>
 </div>
 @endsection

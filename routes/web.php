@@ -19,6 +19,7 @@ Route::resource('usuario','UsuarioController');
 Route::resource('genero','GeneroController');
 Route::resource('cantor','CantorController');
 Route::resource('album','AlbumController');
+Route::resource('musica','MusicaController');
 
 // Um perfil específico
 Route::post('/login',function(){

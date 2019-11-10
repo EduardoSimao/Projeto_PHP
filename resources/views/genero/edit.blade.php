@@ -11,4 +11,6 @@
   </dl>
   <input type="submit" value="Enviar">
   </form>
+  <dt><a href="JavaScript: window.history.back();"><< voltar</a></dt>
+
 @endsection
