@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('usuario','UsuarioController');
+Route::resource('genero','GeneroController');
 
 // Um perfil específico
 Route::post('/login',function(){
@@ -25,17 +26,27 @@ $user = Usuario::where('email', '=', $_POST['email'])->get();
 try {
 
     $teste = $user[0]->id;
-    if($user[0]->senha ==  $_POST['senha'])
+    if($user[0]->senha ==  $_POST['senha']){
+        $_COOKIE['usuario'] = $user;
         return view('usuario.dash')-> with('user',$user); 
-    else
+
+    }
+    else{
         echo("Senha Incorreta!");
         return view('usuario.index');
-
+    }
 
 } catch (Exception $e) {
     echo("Erro ao fazer login! Verifique E-mail e Senha!");
-    return view('usuario.index');
+    return view('usuario');
 
 }
 
+});
+
+Route::get('/usuario/dash',function(){
+
+    $user = $_COOKIE['usuario'];
+    return view('usuario.dash')-> with('user',$user); 
+    
 });

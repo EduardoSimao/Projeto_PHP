@@ -41,8 +41,8 @@ class usuarioController extends Controller
         return redirect('usuario');
     }
 
-    // public function login(Request $request)
-    // {
-    //     return view('usuario.dash');
-    // }
+    public function show(Request $request)
+    {
+        
+    }
 }
