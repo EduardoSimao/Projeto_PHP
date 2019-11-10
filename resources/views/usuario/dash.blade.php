@@ -3436,6 +3436,14 @@ iframe {
 	right: 0px;
 	bottom: 0px;
 }
+
+.menudados {
+  color: #cf6a87;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
 </style>
 @extends('master')
 @section('titulo','DashBoard')
@@ -3447,13 +3455,9 @@ iframe {
 				</span>
   @csrf
   <div class="text-center">
-      <a class="txt2 hov1" href="/cantor">Cantores</a>
-        </div>
-        <div class="text-center">
-      <a class="txt2 hov1" href="/genero">Generos</a>
-        </div>
-        <div class="text-center">
-      <a class="txt2 hov1" href="/album">Albuns</a>
+      <a class="menudados" href="/cantor">Cantores</a>
+      <a class="menudados" href="/genero">Generos</a>
+      <a class="menudados" href="/album">Albuns</a>
         </div>
 </div>
 @endsection
