@@ -21,7 +21,7 @@ class CreateMusicasTable extends Migration
             $table->foreign('genero_id')->references('id')->on('generos');
 
             $table->integer('cantor_id')->unsigned(); 
-            $table->foreign('cantor_id')->references('id')->on('cantores');
+            $table->foreign('cantor_id')->references('id')->on('cantors');
         
             $table->integer('albuns_id')->unsigned(); 
             $table->foreign('albuns_id')->references('id')->on('albuns');

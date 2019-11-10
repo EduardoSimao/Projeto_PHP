@@ -19,7 +19,7 @@ class CreateAlbunsTable extends Migration
             $table->string('nome',100);
 
             $table->integer('cantor_id')->unsigned(); 
-            $table->foreign('cantor_id')->references('id')->on('cantores');
+            $table->foreign('cantor_id')->references('id')->on('cantors');
         
 
         });

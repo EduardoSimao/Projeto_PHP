@@ -1,15 +1,11 @@
 @extends('master')
-@section('titulo','Novo Usuário')
+@section('titulo','Novo Cantor')
 @section('conteudo')
-  <form method="post" action="/usuario">
+  <form method="post" action="/cantor">
   @csrf
   <dl>
   	<dt>Nome</dt>
   	<dd><input type="text" name="nome"></dd>
-  	<dt>E-mail</dt>
-  	<dd><input type="text" name="email"></dd>
-    <dt>Senha</dt>
-  	<dd><input type="password" name="senha"></dd>
   </dl>
   <input type="submit" value="Enviar">
   </form>
