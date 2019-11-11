@@ -3440,12 +3440,18 @@ iframe {
 	bottom: 0px;
 }
 
+.divmenu{
+	border-bottom: 1px solid #546de5;
+    padding-bottom: 25px;
+}
+
 .menudados {
   color: #cf6a87;
   padding: 5px;
   border-radius: 2px;
   font-size: 1.2rem;
   text-decoration: none;
+  border: 1px solid #cf6a87;
 }
 .active {
   color: #c44569;
@@ -3457,7 +3463,7 @@ iframe {
 }
 .cantores{
   padding-top: 35px;
-    width: 200px;
+    width: 350px;
     margin: 0 auto;
 }
 
@@ -3475,6 +3481,7 @@ iframe {
 .centerspan{
   margin-left: 45%;
   color:#c44569;
+  font-weight: bold;
 }
 </style>
 @extends('master')
@@ -3485,7 +3492,7 @@ iframe {
 <span class="login100-form-title p-b-37">
 					Menu
 				</span>
-        <div class="text-center">
+        <div class="text-center divmenu">
           <a class="menudados active" href="/cantor">Cantores</a>
           <a class="menudados" href="/genero">Generos</a>
           <a class="menudados" href="/album">Albuns</a>

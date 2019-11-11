@@ -3437,14 +3437,19 @@ iframe {
 	bottom: 0px;
 }
 
+.divmenu{
+	border-bottom: 1px solid #546de5;
+    padding-bottom: 25px;
+}
+
 .menudados {
   color: #cf6a87;
   padding: 5px;
   border-radius: 2px;
   font-size: 1.2rem;
   text-decoration: none;
+  border: 1px solid #cf6a87;
 }
-
 .active {
   color: #c44569;
   padding: 5px;
@@ -3455,7 +3460,7 @@ iframe {
 }
 .cantores{
   padding-top: 35px;
-    width: 400px;
+    width: 350px;
     margin: 0 auto;
 }
 .albuns{
@@ -3479,26 +3484,25 @@ iframe {
 <div class="container-login100">
 <div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
 <span class="login100-form-title p-b-37">
-					Menu
-				</span>
+	Menu
+</span>
   @csrf
-  <div class="text-center">
+  <div class="text-center divmenu">
     <a class="menudados" href="/cantor">Cantores</a>
     <a class="menudados" href="/genero">Generos</a>
     <a class="menudados active" href="/album">Albuns</a>
     <a class="menudados" href="/musica">Musicas</a>
   </div>
-
   <div class="text-center cantores">
     @foreach($albuns as $a)
     <span>{{$a->nome}}</span>
     <span class="albuns">{{$a->cantor_id}}</span>
     <span class="spancantor"><a class="cant" href="album/{{$a->id}}/edit">Editar</a></span>
+	<br>
     @endforeach
   </div>
   <div class="text-center rod">
     <a class="txt2 hov1 cant" href="/album/create">Novo Album</a>
   </div>
 </div>
-
 @endsection

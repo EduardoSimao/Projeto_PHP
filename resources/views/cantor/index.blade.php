@@ -3436,13 +3436,17 @@ iframe {
 	right: 0px;
 	bottom: 0px;
 }
-
+.divmenu{
+	border-bottom: 1px solid #546de5;
+    padding-bottom: 25px;
+}
 .menudados {
   color: #cf6a87;
   padding: 5px;
   border-radius: 2px;
   font-size: 1.2rem;
   text-decoration: none;
+  border: 1px solid #cf6a87;
 }
 
 .active {
@@ -3455,7 +3459,7 @@ iframe {
 }
 .cantores{
   padding-top: 35px;
-    width: 200px;
+    width: 350px;
     margin: 0 auto;
 }
 
@@ -3480,7 +3484,7 @@ iframe {
 					Menu
 				</span>
   @csrf
-  <div class="text-center">
+  <div class="text-center divmenu">
     <a class="menudados active" href="/cantor">Cantores</a>
     <a class="menudados" href="/genero">Generos</a>
     <a class="menudados" href="/album">Albuns</a>
@@ -3491,6 +3495,7 @@ iframe {
       @foreach($cantores as $a)
     <span>{{$a->nome}}</span>
     <span class="spancantor"><a class="cant" href="cantor/{{$a->id}}/edit">Editar</a></span>
+	<br>
     @endforeach
   </div>
   <div class="text-center rod">

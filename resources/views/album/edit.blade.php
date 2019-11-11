@@ -3440,13 +3440,26 @@ iframe {
 	bottom: 0px;
 }
 
+.divmenu{
+	border-bottom: 1px solid #546de5;
+    padding-bottom: 25px;
+}
+
 .menudados {
   color: #cf6a87;
   padding: 5px;
   border-radius: 2px;
   font-size: 1.2rem;
   text-decoration: none;
+  border: 1px solid #cf6a87;
 }
+
+.cantores{
+  padding-top: 35px;
+    width: 350px;
+    margin: 0 auto;
+}
+
 .active {
   color: #c44569;
   padding: 5px;
@@ -3454,11 +3467,6 @@ iframe {
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: bold;
-}
-.cantores{
-  padding-top: 35px;
-    width: 200px;
-    margin: 0 auto;
 }
 
 .spancantor{
@@ -3475,8 +3483,8 @@ iframe {
 .centerspan{
   margin-left: 45%;
   color:#c44569;
+  font-weight: bold;
 }
-
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3532,7 +3540,13 @@ select {
 .select:hover::after {
   color: #000000;
 }
-
+.focusspan{
+  box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+}
 </style>
 @extends('master')
 @section('titulo','Editar Album')
@@ -3542,10 +3556,10 @@ select {
 <span class="login100-form-title p-b-37">
 					Menu
 				</span>
-        <div class="text-center">
-          <a class="menudados active" href="/cantor">Cantores</a>
+        <div class="text-center divmenu">
+          <a class="menudados" href="/cantor">Cantores</a>
           <a class="menudados" href="/genero">Generos</a>
-          <a class="menudados" href="/album">Albuns</a>
+          <a class="menudados active" href="/album">Albuns</a>
           <a class="menudados" href="/musica">Musicas</a>
         </div>
         <span class="centerspan">Editar Cantor</span>
@@ -3558,8 +3572,9 @@ select {
       <span class="focus-input100"></span>
     </div>
 
-    <div class="select input100">
+    <div class="select input100 focusspan">
    <select name="cantor_id" id="slct">
+   
       @foreach($cantores as $a)
         @if($a->id == $album->cantor_id)
         <option value='{{$a->id}}' selected>{{$a->nome}}</option>
@@ -3576,6 +3591,3 @@ select {
     <a class="txt2 hov1" href="JavaScript: window.history.back();">voltar</a>
   </div>
 @endsection
-
-    
-
