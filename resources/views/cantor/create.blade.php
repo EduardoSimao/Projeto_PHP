@@ -3502,7 +3502,7 @@ iframe {
         <span class="centerspan">Novo Cantor</span>
         <form class="login100-form validate-form" method="post" action="/cantor">
         @csrf
-        @method("put")
+        @method("post")
 
     <div class="wrap-input100 validate-input m-b-20" data-validate="Nome">
       <input class="input100" type="text" name="nome" placeholder="Nome" require>

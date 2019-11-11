@@ -3561,7 +3561,7 @@ select {
           <a class="menudados" href="/album">Albuns</a>
           <a class="menudados active" href="/musica">Musicas</a>
         </div>
-        <span class="centerspan">Novo Album</span>
+        <span class="centerspan">Nova Musica</span>
         <form class="login100-form validate-form" method="post" action="/musica">
         @csrf
 
